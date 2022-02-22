@@ -1,4 +1,8 @@
-//深度 clone 对象
+/**
+ * @description 深度克隆
+ * @param {*} target 想要克隆的目标
+ * @returns 克隆的结果
+ */
 
 const DepthClone = target => {
     //判断是否为引用数据，如果不是直接返回

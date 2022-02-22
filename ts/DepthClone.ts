@@ -1,4 +1,8 @@
-//深度 clone 对象
+/**
+ * @description 深度克隆
+ * @param {*} target 想要克隆的目标
+ * @returns 克隆的结果
+ */
 
 const DepthClone:<T>(target: T) => T = target => {
     //clone 函数

@@ -1,5 +1,8 @@
-//判断传入的对象是否为空
-//为空返回true
+/**
+ * @description 判断空对象
+ * @param target 想要判断的对象
+ * @returns 判断结果（ture 为空对象， false 为非空对象）
+ */
 
 const DeterminingEmptyObjects = target => {
     //判断target是否是对象，如果不是则抛出异常
