@@ -1,7 +1,7 @@
 /**
  * @description 判断空对象
- * @param target 想要判断的对象
- * @returns 判断结果（ture 为空对象， false 为非空对象）
+ * @param {*} target 想要判断的对象
+ * @returns {boolean} 判断结果（ture 为空对象， false 为非空对象）
  */
 
 const DeterminingEmptyObjects = target => {

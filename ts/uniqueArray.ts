@@ -1,7 +1,7 @@
 /**
  * @description 数组去重
- * @param {*} arr 想要去重的数组
- * @returns 去重后的数组
+ * @param {any[]} arr 想要去重的数组
+ * @returns {any[]} 去重后的数组
  */
 
 const uniqueArray: (arr: Array<any>) => Array<any> = arr => {

@@ -1,8 +1,8 @@
 /**
  * @description 防抖 立即执行
- * @param {*} fn 想要防抖包裹的函数
- * @param {*} delay 延迟执行的毫秒数
- * @returns 放回加工后的函数
+ * @param {Function} fn 想要防抖包裹的函数
+ * @param {number} delay 延迟执行的毫秒数
+ * @returns {Function} 放回加工后的函数
  */
 
 const debounceNow = (fn, delay) => {
