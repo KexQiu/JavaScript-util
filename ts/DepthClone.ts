@@ -4,7 +4,7 @@
  * @returns {*} 克隆的结果
  */
 
-const DepthClone:<T>(target: T) => T = target => {
+const depthClone:<T>(target: T) => T = target => {
     //clone 函数
     const cloneFunction:(target: Function) => Function = target => {
         let funStr:string = target.toString()
@@ -44,4 +44,4 @@ const DepthClone:<T>(target: T) => T = target => {
 }
 
 
-export default DepthClone
+export default depthClone

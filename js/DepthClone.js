@@ -4,7 +4,7 @@
  * @returns {*} 克隆的结果
  */
 
-const DepthClone = target => {
+const depthClone = target => {
     //判断是否为引用数据，如果不是直接返回
     let type = typeof target
     if( type === 'function') return cloneFunction(target)
@@ -43,4 +43,4 @@ const DepthClone = target => {
 }
 
 
-export default DepthClone
+export default depthClone
