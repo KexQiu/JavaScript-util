@@ -6,12 +6,12 @@
  * @returns {Function} 放回加工后的函数
  */
 
-const debounce: (fn: Function, delay: number, immediate: boolean) => Function = (fn, delay, immediate) => {
+export const debounce = (fn: Function, delay: number, immediate: boolean): Function => {
     // 创建一个变量用于储存计时器，由于闭包，不会被垃圾回收机制回收
-    let timeout
+    let timeout: any
     // 用于标记是否已经执行过函数
     let canDo: boolean = true
-    return (...args) => {
+    return (...args: any[]) => {
         // 绑定this
         const self = this
         // 立即执行一次，并将标记取反
