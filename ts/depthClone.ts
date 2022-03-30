@@ -4,26 +4,27 @@
  * @returns {*} 克隆的结果
  */
 
-const depthClone = target => {
+const depthClone:<T>(target: T) => T = target => {
+    //clone 函数
+    const cloneFunction:(target: Function) => Function = target => {
+        let funStr:string = target.toString()
+        return target.prototype ? eval(`(${funStr})`) : eval(funStr)
+    }
+
     //判断是否为引用数据，如果不是直接返回
-    let type = typeof target
-    if( type === 'function') return cloneFunction(target)
+    let type: string = typeof target
+    if( type === 'function') return cloneFunction(target as any)
     if( type === null || type !== 'object') return target
     //设置一个字典用于储存已经添加过的值（针对循环引用
     let set = new Set()
     set.add(target)
 
-    //clone 函数
-    const cloneFunction = target => {
-        let funStr = target.toString()
-        return target.prototype ? eval(`(${funStr})`) : eval(funStr)
-    }
 
-    const clone = target => {
+    const clone:(target: Object) => Object = target => {
         //新建一个对象或数组
-        const newObject = target instanceof Array ? new Array() : new Object()
+        const newObject: Object|Array<any> = target instanceof Array ? new Array() : new Object()
         //获取target的可枚举键值对
-        let targetKeys = Reflect.ownKeys(target)
+        let targetKeys: (string|symbol)[] = Reflect.ownKeys(target)
         //将键值对添加至新建的对象中
         targetKeys.forEach(e => {
             //判断空值
@@ -39,7 +40,7 @@ const depthClone = target => {
         })
         return newObject
     }
-    return clone(target)
+    return clone(target) as any
 }
 
 
